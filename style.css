@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(../bootstrap/css/bootstrap.min.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,7 +21,8 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  box-sizing: border-box; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -44,3 +46,94 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+:root {
+  --dark-cyan: #0E8784;
+  --dark-grey-blue: #333D4B;
+  --pale-orange: #FDD6BA;
+  --light-cream: #FEFCF7;
+  --grey: #83888F;
+  --fraunces: 'Fraunces', serif;
+  --barlow: 'Barlow', sans-serif; }
+
+body {
+  font: 16px/26px var(--barlow); }
+
+.title-alternate-big {
+  font: 900 150px/72px var(--fraunces);
+  text-transform: lowercase;
+  color: var(--grey); }
+
+h1 {
+  font: 900 72px/72px var(--fraunces);
+  color: var(--dark-grey-blue); }
+
+h2 {
+  font: 900 40px/48px var(--fraunces);
+  color: var(--dark-grey-blue); }
+
+h3 {
+  font: 900 32px/36px var(--fraunces);
+  color: var(--dark-grey-blue); }
+
+h4 {
+  font: 900 24px/32px var(--fraunces);
+  color: var(--dark-grey-blue); }
+
+nav a {
+  font: bold 12px/15px var(--barlow);
+  color: var(--grey);
+  text-transform: uppercase;
+  cursor: pointer; }
+
+button {
+  padding: 14px 0;
+  width: 217px;
+  text-align: center;
+  font: 900 18px/25px var(--fraunces);
+  color: white;
+  background-color: var(--dark-cyan);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; }
+  button:hover {
+    background-color: #66D2CF; }
+  button.disabled {
+    cursor: default;
+    background-color: #E2DEDB; }
+
+.big-selection {
+  width: 228px;
+  height: 250px;
+  padding: 32px 28px;
+  border-radius: 8px;
+  background-color: #F4F1EB;
+  color: var(--dark-grey-blue);
+  text-align: left;
+  cursor: pointer; }
+  .big-selection h4 {
+    margin-bottom: 24px; }
+  .big-selection:hover, .big-selection:focus {
+    background-color: var(--pale-orange); }
+  .big-selection.active {
+    background-color: var(--dark-cyan);
+    color: var(--light-cream); }
+    .big-selection.active h4 {
+      color: white; }
+
+.accordion .accordion-item {
+  border: none; }
+  .accordion .accordion-item .accordion-button {
+    font: 900 40px/48px var(--fraunces);
+    color: var(--grey);
+    background-color: white;
+    box-shadow: none; }
+    .accordion .accordion-item .accordion-button::after {
+      background-image: url("../assets/plan/desktop/icon-arrow.svg"); }
+    .accordion .accordion-item .accordion-button:hover {
+      background-color: inherit; }
+      .accordion .accordion-item .accordion-button:hover::after {
+        background-image: url("../assets/plan/desktop/icon-arrow-active.svg"); }
+    .accordion .accordion-item .accordion-button.disabled {
+      opacity: 0.5;
+      pointer-events: none; }

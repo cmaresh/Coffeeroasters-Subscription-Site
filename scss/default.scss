@@ -1,0 +1,128 @@
+:root {
+    --dark-cyan: #0E8784;
+    --dark-grey-blue: #333D4B;
+    --pale-orange: #FDD6BA;
+    --light-cream: #FEFCF7;
+    --grey: #83888F;
+    --fraunces: 'Fraunces', serif;
+    --barlow: 'Barlow', sans-serif;
+}
+
+body {
+    font: 16px/26px var(--barlow);
+}
+
+.title-alternate-big {
+    font: 900 150px/72px var(--fraunces);
+    text-transform: lowercase;
+    color: var(--grey);
+}
+
+h1 {
+    font: 900 72px/72px var(--fraunces);
+    color: var(--dark-grey-blue);
+}
+
+h2 {
+    font: 900 40px/48px var(--fraunces);
+    color: var(--dark-grey-blue);
+}
+
+h3 {
+    font: 900 32px/36px var(--fraunces);
+    color: var(--dark-grey-blue);
+}
+
+h4 {
+    font: 900 24px/32px var(--fraunces);
+    color: var(--dark-grey-blue);
+}
+
+nav {
+    a {
+        font: bold 12px/15px var(--barlow);
+        color: var(--grey);
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+button {
+    padding: 14px 0;
+    width: 217px;
+    text-align: center;
+    font: 900 18px/25px var(--fraunces);
+    color: white;
+    background-color: var(--dark-cyan);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #66D2CF;
+    }
+
+    &.disabled {
+        cursor: default;
+        background-color: #E2DEDB;
+    }
+}
+
+
+.big-selection {
+    width: 228px;
+    height: 250px;
+    padding: 32px 28px;
+    border-radius: 8px;
+    background-color: #F4F1EB;
+    color: var(--dark-grey-blue);
+    text-align: left;
+    cursor: pointer;
+
+    h4 {
+        margin-bottom: 24px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--pale-orange);
+    }
+
+    &.active {
+        background-color: var(--dark-cyan);
+        color: var(--light-cream);
+
+        h4 {
+            color: white;
+        }
+    }
+}
+
+.accordion {
+    .accordion-item {
+        border: none;
+        .accordion-button {
+            font: 900 40px/48px var(--fraunces);
+            color: var(--grey);
+            background-color: white;
+            box-shadow: none;
+
+            &::after {
+                background-image: url('../assets/plan/desktop/icon-arrow.svg');
+            }
+
+            &:hover {
+                background-color: inherit;
+
+                &::after {
+                    background-image: url('../assets/plan/desktop/icon-arrow-active.svg');
+                }
+            }
+
+            &.disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+        }
+    }
+}
