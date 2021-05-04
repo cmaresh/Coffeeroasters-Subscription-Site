@@ -1,0 +1,101 @@
+#hero {
+    padding: 90px 24px;
+    text-align: center;
+    background: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+    border-radius: 10px;
+
+    h1 {
+        color: white;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    p {
+        display: block;
+        margin-top: 20px;
+        color: var(--light-cream);
+    }
+    button {
+        margin-top: 35px;
+    }
+}
+
+#our-collection {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title-alternate-big {
+        font-size: 40px;
+        line-height: 72px;
+        background-color: #f3ec78;
+        background-image: linear-gradient(to bottom, var(--grey), white);
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+    }
+
+    #our-collection__list {
+        .our-collection__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:first-child {
+                img {
+                    margin-top: 36px;
+                }
+            }
+
+            img {
+                margin-top: 48px;
+                height: 151px;
+            }
+
+            h4 {
+                margin-top: 20px;
+            }
+
+            p {
+                margin-top: 15px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+#why-choose-us {
+    margin-top: 120px;
+
+    #why-choose-us__top {
+        background-color: var(--dark-grey-blue);
+        border-radius: 10px 10px 0 0;
+        padding: 65px 22px 26px;
+        text-align: center;
+
+        h2 {
+            color: white;
+            font-size: 28px;
+            line-height: 28px ;
+        }
+
+        p {
+            margin-top: 24px;
+            color: var(--light-cream);
+        }
+    }
+
+    #why-choose-us__bottom {
+        #why-choose-us__list {
+            padding: 36px 24px;
+
+            .why-choose-us__item {
+                background-color: var();
+            }
+        }
+    }
+}
