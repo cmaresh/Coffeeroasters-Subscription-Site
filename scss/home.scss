@@ -1,22 +1,35 @@
 #hero {
     padding: 90px 24px;
     text-align: center;
-    background: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+    background: no-repeat center/cover url('../assets/home/mobile/image-hero-coffeepress.jpg');
     border-radius: 10px;
 
-    h1 {
-        color: white;
-        font-size: 40px;
-        line-height: 40px;
+    #hero__content {
+        h1 {
+            color: white;
+            font-size: 40px;
+            line-height: 40px;
+        }
+    
+        p {
+            display: block;
+            margin-top: 20px;
+            color: var(--light-cream);
+        }
+    
+        button {
+            margin-top: 35px;
+        }
+
+        @media(min-width: $tablet-width) {
+            max-width: 400px;
+            text-align: left;
+        }
     }
 
-    p {
-        display: block;
-        margin-top: 20px;
-        color: var(--light-cream);
-    }
-    button {
-        margin-top: 35px;
+    @media(min-width: $tablet-width) {
+        padding: 100px 55px;
+        background: no-repeat center/cover url('../assets/home/tablet/image-hero-coffeepress.jpg');
     }
 }
 
@@ -25,6 +38,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media(min-width: $tablet-width) {
+        margin-top: 140px;
+    }
 
     .title-alternate-big {
         font-size: 40px;
@@ -37,6 +54,13 @@
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent; 
         -moz-text-fill-color: transparent;
+
+        @media(min-width: $tablet-width) {
+            position: absolute;
+            font-size: 96px;
+            z-index: -1;
+            opacity: 50%;
+        }
     }
 
     #our-collection__list {
@@ -44,6 +68,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @media(min-width: $tablet-width) {
+                flex-direction: row;
+            }
 
             &:first-child {
                 img {
@@ -56,13 +84,16 @@
                 height: 151px;
             }
 
-            h4 {
-                margin-top: 20px;
-            }
-
-            p {
-                margin-top: 15px;
+            .our-collection__item-description {
                 text-align: center;
+                h4 {
+                    margin-top: 20px;
+                }
+    
+                p {
+                    margin-top: 15px;
+                    text-align: center;
+                }
             }
         }
     }
@@ -133,5 +164,45 @@
                 }
             }
         }
+    }
+}
+
+#how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;   
+
+    h4 {
+        color: var(--grey);
+    }
+
+    #how-it-works__list {
+        margin-top: 75px;
+        text-align: center;
+
+        .how-it-works__item {
+            margin-top: 55px;
+
+            h1 {
+                color: var(--pale-orange);
+            }
+
+            h3 {
+                margin-top: 22px;
+                color: var(--dark-grey-blue)
+            }
+
+            p {
+                margin-top: 22px;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    button {
+        margin-top: 75px;
     }
 }
