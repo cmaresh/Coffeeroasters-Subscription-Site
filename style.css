@@ -209,7 +209,33 @@ header {
     #why-choose-us #why-choose-us__top p {
       margin-top: 24px;
       color: var(--light-cream); }
-  #why-choose-us #why-choose-us__bottom #why-choose-us__list {
-    padding: 36px 24px; }
-    #why-choose-us #why-choose-us__bottom #why-choose-us__list .why-choose-us__item {
-      background-color: var(); }
+  #why-choose-us #why-choose-us__bottom {
+    position: relative; }
+    #why-choose-us #why-choose-us__bottom #why-choose-us__backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50%;
+      width: 100%;
+      z-index: -1;
+      background: url("../assets/plan/mobile/bg-steps.png");
+      border-radius: 0 0 8px 8px;
+      background-position-y: -15px; }
+    #why-choose-us #why-choose-us__bottom #why-choose-us__list {
+      padding: 36px 24px; }
+      #why-choose-us #why-choose-us__bottom #why-choose-us__list .why-choose-us__item {
+        text-align: center;
+        padding: 70px 40px 50px;
+        background-color: var(--dark-cyan);
+        color: var(--light-cream);
+        margin-top: 24px;
+        border-radius: 8px; }
+        #why-choose-us #why-choose-us__bottom #why-choose-us__list .why-choose-us__item:first-child {
+          margin-top: 0; }
+        #why-choose-us #why-choose-us__bottom #why-choose-us__list .why-choose-us__item img {
+          width: 72px; }
+        #why-choose-us #why-choose-us__bottom #why-choose-us__list .why-choose-us__item h4 {
+          margin-top: 50px;
+          color: var(--light-cream); }
+        #why-choose-us #why-choose-us__bottom #why-choose-us__list .why-choose-us__item p {
+          margin-top: 24px; }
