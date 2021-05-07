@@ -1,4 +1,5 @@
 $tablet-width: 767px;
+$desktop-width: 991px;
 
 :root {
     --dark-cyan: #0E8784;
@@ -173,6 +174,7 @@ footer {
     align-items: center;
     padding-top: 55px;
     padding-bottom: 45px;
+    margin-bottom: 75px;
 
     nav {
         display: flex;
@@ -180,11 +182,25 @@ footer {
         align-items: center;
         margin-top: 45px;
 
+        @media(min-width: $tablet-width) {
+            margin-top: 30px;
+            flex-direction: row;
+        }
+
         a {
             margin-top: 24px;
 
             &:first-child {
                 margin-top: 0;
+            }
+
+            @media(min-width: $tablet-width) {
+                margin-top: 0;
+                margin-left: 30px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -192,6 +208,9 @@ footer {
     #footer__socials {
         margin-top: 45px;
 
+        @media(min-width: $tablet-width) {
+            margin-top: 65px;
+        }
         img {
             margin-left: 22px;
 
