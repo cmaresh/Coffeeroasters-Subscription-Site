@@ -3,32 +3,61 @@
     text-align: center;
     background: no-repeat center/cover url('../assets/home/mobile/image-hero-coffeepress.jpg');
     border-radius: 10px;
+
+    @media(min-width: $tablet-width) {
+        background: no-repeat center/cover url('/assets/home/tablet/image-hero-coffeepress.jpg');
+        padding: 100px 55px;
+    }
+
+    @media(min-width: $desktop-width) {
+        background: no-repeat center/cover url('/assets/home/desktop/image-hero-coffeepress.jpg');
+        padding: 115px 55px;
+    }
+
     #hero__content {
         h1 {
             color: white;
             font-size: 40px;
             line-height: 40px;
+
+            @media(min-width: $tablet-width) {
+                font-size: 48px;
+                line-height: 48px;
+            }
+            
+            @media(min-width: $desktop-width) {
+                font-size: 72px;
+                line-height: 72px;
+            }
         }
     
         p {
             display: block;
             margin-top: 20px;
             color: var(--light-cream);
+
+            @media(min-width: $desktop-width) {
+                max-width: 430px;
+                margin-top: 30px;
+            }
         }
     
         button {
             margin-top: 35px;
+
+            @media(min-width: $desktop-width) {
+                margin-top: 60px;
+            }
         }
 
         @media(min-width: $tablet-width) {
             max-width: 400px;
             text-align: left;
         }
-    }
 
-    @media(min-width: $tablet-width) {
-        padding: 100px 55px;
-        background: no-repeat center/cover url('../assets/home/tablet/image-hero-coffeepress.jpg');
+        @media(min-width: $desktop-width) {
+            max-width: 500px;
+        }
     }
 }
 
@@ -44,7 +73,7 @@
     }
 
     @media(min-width: $desktop-width) {
-        margin-top: 250px;
+        margin-top: 260px;
     }
 
     .title-alternate-big {
@@ -153,6 +182,10 @@
         position: relative;
     }
 
+    @media(min-width: $desktop-width) {
+        margin-top: 200px;
+    }
+
     #why-choose-us__top {
         background-color: var(--dark-grey-blue);
         border-radius: 10px 10px 0 0;
@@ -248,7 +281,8 @@
                     width: 72px;
 
                     @media(min-width: $tablet-width) {
-                        width: 55px;
+                        width: auto;
+                        height: 55px;
                     }
                 }
 
@@ -286,6 +320,11 @@
 
     @media(min-width: $tablet-width) {
         align-items: flex-start;
+    }
+
+    @media(min-width: $desktop-width) {
+        padding: 0 80px;
+        margin-top: 200px;
     }
 
     h4 {
@@ -335,13 +374,26 @@
                 }
             }
 
+            @media(min-width: $desktop-width) {
+                padding-right: 75px;
+
+                &:last-child {
+                    padding-right: 75px;
+                }
+            }
+
             h1 {
                 color: var(--pale-orange);
             }
 
             h3 {
                 margin-top: 22px;
-                color: var(--dark-grey-blue)
+                color: var(--dark-grey-blue);
+
+                
+                @media(min-width: $desktop-width) {
+                    max-width: 200px;
+                }
             }
 
             p {
