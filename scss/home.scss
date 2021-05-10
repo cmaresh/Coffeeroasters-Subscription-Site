@@ -3,7 +3,6 @@
     text-align: center;
     background: no-repeat center/cover url('../assets/home/mobile/image-hero-coffeepress.jpg');
     border-radius: 10px;
-
     #hero__content {
         h1 {
             color: white;
@@ -38,9 +37,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     @media(min-width: $tablet-width) {
         margin-top: 140px;
+    }
+
+    @media(min-width: $desktop-width) {
+        margin-top: 250px;
     }
 
     .title-alternate-big {
@@ -64,6 +68,8 @@
 
         @media(min-width: 1100px) {
             font-size: 150px;
+            line-height: 150px;
+            top: -95px;
         }
     }
 
@@ -86,12 +92,16 @@
 
             @media(min-width: $desktop-width) {
                 flex-direction: column;
+                margin-top: 0;
             }
 
             &:first-child {
                 margin-top: 36px;
                 @media(min-width: $tablet-width) {
                     margin-top: 48px;
+                }
+                @media(min-width: $desktop-width) {
+                    margin-top: 0;
                 }
             }
 
@@ -127,7 +137,7 @@
                     @media(min-width: $tablet-width) {
                         text-align: left;
                     }
-                    @media(min-width: $tablet-width) {
+                    @media(min-width: $desktop-width) {
                         text-align: center;
                     }
                 }
@@ -177,7 +187,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 62%;
+            height: 50%;
             width: 100%;
             z-index: -1;
             background: url('../assets/plan/mobile/bg-steps.png');
@@ -185,12 +195,13 @@
             background-position-y: -15px;
 
             @media(min-width: $tablet-width) {
+                height: 62%;
                 border-radius: 8px;
             }
         }
 
         #why-choose-us__list {
-            padding: 36px 24px;
+            padding: 36px;
 
             @media(min-width: $tablet-width) {
                 padding: 36px 58px
@@ -198,13 +209,14 @@
 
             @media(min-width: $desktop-width) {
                 padding: 36px 85px;
+                flex-direction: row;
             }
             .why-choose-us__item {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                padding: 70px 40px 50px;
+                padding: 70px 35px 50px;
                 background-color: var(--dark-cyan);
                 color: var(--light-cream);
                 margin-top: 24px;
@@ -222,6 +234,7 @@
                     margin-top: 0;
                     margin-left: 30px;
                     padding: 70px 45px 45px;
+                    width: calc(33.33% - 20px);
                     &:first-child {
                         margin-left: 0;
                     }
@@ -233,6 +246,10 @@
 
                 img {
                     width: 72px;
+
+                    @media(min-width: $tablet-width) {
+                        width: 55px;
+                    }
                 }
 
                 .why-choose-us__item-description {
@@ -243,7 +260,7 @@
                         margin-left: 55px;
                     }
 
-                    @media(min-width: $tablet-width) {
+                    @media(min-width: $desktop-width) {
                         margin-left: 0;
                         margin-top: 50px;
                     }
