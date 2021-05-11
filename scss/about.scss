@@ -1,0 +1,50 @@
+#about {
+    padding-right: 25px;
+    padding-left: 25px;
+    #hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 110px 22px 85px;
+        background: no-repeat center/cover url('../assets/about/mobile/image-hero-whitecup.jpg');
+        border-radius: 10px;
+        overflow: hidden;
+
+        #hero__image-tint {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4019);
+        }
+
+        h3 {
+            position: relative;
+            z-index: 10;
+            color: var(--light-cream);
+            font-size: 28px;
+            line-height: 28px;
+        }
+
+        p {
+            position: relative;
+            z-index: 10;
+            color: var(--light-cream);
+            font-size: 15px;
+            line-height: 25px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+
+    #our-commitment {
+        
+        #our-commitment__image-wrap {
+            overflow: hidden;
+            border-radius: 8px;
+            background: no-repeat center/cover url('../assets/about/mobile/image-commitment.jpg');
+        }
+    }
+}
