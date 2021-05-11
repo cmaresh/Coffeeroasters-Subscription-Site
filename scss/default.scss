@@ -144,7 +144,7 @@ header {
     background-color: white;
     z-index: 100;
 
-    @media(min-width: $desktop-width) {
+    @media(min-width: $tablet-width) {
         position: static;
         padding: 45px 0 ;
     }
@@ -200,6 +200,7 @@ header {
                 font: bold 12px/15px var(--barlow);
                 text-transform: uppercase;
                 color: var(--grey);
+                letter-spacing: 0.92px;
             }
         }
     }
@@ -252,6 +253,7 @@ footer {
 
         a {
             margin-top: 24px;
+            letter-spacing: 0.92px;
 
             &:first-child {
                 margin-top: 0;
@@ -295,6 +297,8 @@ footer {
 
 /* BOOTSTRAP OVERRIDES */
 
-.container {
-    max-width: 1280px
+@media(min-width: 1200px) {
+    .container {
+        max-width: 1280px
+    }
 }

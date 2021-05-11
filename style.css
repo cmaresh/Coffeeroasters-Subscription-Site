@@ -150,7 +150,7 @@ header {
   padding: 25px 0;
   background-color: white;
   z-index: 100; }
-  @media (min-width: 991px) {
+  @media (min-width: 767px) {
     header {
       position: static;
       padding: 45px 0; } }
@@ -195,7 +195,8 @@ header {
           margin-left: 32px;
           font: bold 12px/15px var(--barlow);
           text-transform: uppercase;
-          color: var(--grey); } }
+          color: var(--grey);
+          letter-spacing: 0.92px; } }
   header #header__close-menu {
     display: none; }
   @media (min-width: 767px) {
@@ -232,7 +233,8 @@ footer {
         flex: 1;
         padding-left: 100px; } }
     footer nav a {
-      margin-top: 24px; }
+      margin-top: 24px;
+      letter-spacing: 0.92px; }
       footer nav a:first-child {
         margin-top: 0; }
       footer nav a:hover {
@@ -257,8 +259,9 @@ footer {
         margin-left: 0; }
 
 /* BOOTSTRAP OVERRIDES */
-.container {
-  max-width: 1280px; }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1280px; } }
 
 #hero {
   padding: 90px 24px;
@@ -342,7 +345,7 @@ footer {
         top: -95px; } }
   @media (min-width: 767px) {
     #our-collection #our-collection__list {
-      padding: 0 70px; } }
+      padding: 0 55px; } }
   #our-collection #our-collection__list .our-collection__item {
     display: flex;
     flex-direction: column;
@@ -370,11 +373,13 @@ footer {
         #our-collection #our-collection__list .our-collection__item img {
           height: 193px; } }
     #our-collection #our-collection__list .our-collection__item .our-collection__item-description {
-      text-align: center; }
+      text-align: center;
+      padding: 0 20px; }
       @media (min-width: 767px) {
         #our-collection #our-collection__list .our-collection__item .our-collection__item-description {
           text-align: left;
-          margin-left: 30px; } }
+          margin-left: 30px;
+          padding: 0; } }
       @media (min-width: 991px) {
         #our-collection #our-collection__list .our-collection__item .our-collection__item-description {
           text-align: center;
@@ -403,18 +408,29 @@ footer {
     background-color: var(--dark-grey-blue);
     border-radius: 10px 10px 0 0;
     padding: 65px 22px 26px;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
     @media (min-width: 767px) {
       #why-choose-us #why-choose-us__top {
         background-color: transparent;
         padding: 65px 81px 26px; } }
+    @media (min-width: 991px) {
+      #why-choose-us #why-choose-us__top {
+        padding: 100px 81px 85px; } }
     #why-choose-us #why-choose-us__top h2 {
       color: white;
       font-size: 28px;
       line-height: 28px; }
+      @media (min-width: 991px) {
+        #why-choose-us #why-choose-us__top h2 {
+          font-size: 40px;
+          line-height: 48px; } }
     #why-choose-us #why-choose-us__top p {
       margin-top: 24px;
-      color: var(--light-cream); }
+      color: var(--light-cream);
+      max-width: 540px; }
   #why-choose-us #why-choose-us__bottom {
     position: relative; }
     @media (min-width: 767px) {
@@ -433,7 +449,12 @@ footer {
       @media (min-width: 767px) {
         #why-choose-us #why-choose-us__bottom #why-choose-us__backdrop {
           height: 62%;
-          border-radius: 8px; } }
+          border-radius: 8px;
+          background: url("../assets/plan/tablet/bg-steps.png"); } }
+      @media (min-width: 991px) {
+        #why-choose-us #why-choose-us__bottom #why-choose-us__backdrop {
+          height: 74%;
+          background: url("../assets/plan/desktop/bg-steps.png"); } }
     #why-choose-us #why-choose-us__bottom #why-choose-us__list {
       padding: 36px; }
       @media (min-width: 767px) {
@@ -442,6 +463,7 @@ footer {
       @media (min-width: 991px) {
         #why-choose-us #why-choose-us__bottom #why-choose-us__list {
           padding: 36px 85px;
+          padding-top: 0;
           flex-direction: row; } }
       #why-choose-us #why-choose-us__bottom #why-choose-us__list .why-choose-us__item {
         display: flex;
