@@ -2,16 +2,16 @@
     #hero {
         padding: 90px 24px;
         text-align: center;
-        background: no-repeat center/cover url('../assets/home/mobile/image-hero-coffeepress.jpg');
+        background: no-repeat center/cover url('assets/home/mobile/image-hero-coffeepress.jpg');
         border-radius: 10px;
 
         @media(min-width: $tablet-width) {
-            background: no-repeat center/cover url('/assets/home/tablet/image-hero-coffeepress.jpg');
+            background: no-repeat center/cover url('assets/home/tablet/image-hero-coffeepress.jpg');
             padding: 100px 55px;
         }
 
         @media(min-width: $desktop-width) {
-            background: no-repeat center/cover url('/assets/home/desktop/image-hero-coffeepress.jpg');
+            background: no-repeat center/cover url('assets/home/desktop/image-hero-coffeepress.jpg');
             padding: 115px 55px;
         }
 
@@ -239,19 +239,19 @@
                 height: 50%;
                 width: 100%;
                 z-index: -1;
-                background: url('../assets/plan/mobile/bg-steps.png');
+                background: url('assets/plan/mobile/bg-steps.png');
                 border-radius: 0 0 8px 8px;
                 background-position-y: -15px;
 
                 @media(min-width: $tablet-width) {
                     height: 62%;
                     border-radius: 8px;
-                    background: url('../assets/plan/tablet/bg-steps.png');
+                    background: url('assets/plan/tablet/bg-steps.png');
                 }
 
                 @media(min-width: $desktop-width) {
                     height: 74%;
-                    background: url('../assets/plan/desktop/bg-steps.png');
+                    background: url('assets/plan/desktop/bg-steps.png');
                 }
             }
 

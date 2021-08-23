@@ -104,31 +104,29 @@ button {
     }
 }
 
-.accordion {
-    .accordion-item {
-        border: none;
-        .accordion-button {
-            font: 900 40px/48px var(--fraunces);
-            color: var(--grey);
-            background-color: white;
-            box-shadow: none;
+.accordion-item {
+    border: none;
+    .accordion-button {
+        font: 900 40px/48px var(--fraunces);
+        color: var(--grey);
+        background-color: white;
+        box-shadow: none;
+
+        &::after {
+            background-image: url('./assets/plan/desktop/icon-arrow.svg');
+        }
+
+        &:hover {
+            background-color: inherit;
 
             &::after {
-                background-image: url('../assets/plan/desktop/icon-arrow.svg');
+                background-image: url('./assets/plan/desktop/icon-arrow-active.svg');
             }
+        }
 
-            &:hover {
-                background-color: inherit;
-
-                &::after {
-                    background-image: url('../assets/plan/desktop/icon-arrow-active.svg');
-                }
-            }
-
-            &.disabled {
-                opacity: 0.5;
-                pointer-events: none;
-            }
+        &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
         }
     }
 }

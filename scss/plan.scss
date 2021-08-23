@@ -1,0 +1,91 @@
+#plan {
+    &.container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 110px 22px 140px;
+        background: no-repeat center/cover url('assets/plan/mobile/image-hero-blackcup.jpg');
+        border-radius: 10px;
+        overflow: hidden;
+
+        @media(min-width: $tablet-width) {
+            align-items: start;
+            padding: 115px 58px;
+            background-image: url('assets/plan/tablet/image-hero-blackcup.jpg');
+        }
+
+        @media(min-width: $desktop-width) {
+            padding: 135px 85px;
+            background-image: url('assets/plan/desktop/image-hero-blackcup.jpg');
+        }
+
+        #hero__image-tint {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4019);
+        }
+
+        h3 {
+            position: relative;
+            z-index: 10;
+            color: var(--light-cream);
+            font-size: 40px;
+            line-height: 40px;
+
+            @media(min-width: $tablet-width) {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            @media(min-width: $desktop-width) {
+                font-size: 40px;
+                line-height: 48px;
+            }
+        }
+
+        p {
+            position: relative;
+            z-index: 10;
+            color: var(--light-cream);
+            font-size: 15px;
+            line-height: 25px;
+            margin-top: 20px;
+            text-align: center;
+            opacity: 0.8;
+
+            @media(min-width: $tablet-width) {
+                max-width: 400px;
+                text-align: left;
+            }
+        }
+    }
+
+    #steps {
+        padding: 75px 25px;
+        margin: 120px 0 100px;
+        //background-color: var(--dark-grey-blue);
+        background: no-repeat center/cover url("assets/plan/mobile/bg-steps.png");
+        border-radius: 10px;
+
+        ol {
+
+            li {
+                text-align: center;
+                h4 {
+                    color: white;
+                    font-size: 28px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
