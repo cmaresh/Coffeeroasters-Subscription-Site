@@ -1239,4 +1239,56 @@ footer #footer__socials img:first-child {
 }
 #plan #modal {
   display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  z-index: 100;
+}
+#plan #modal.active {
+  display: flex;
+}
+#plan #modal #modal-blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#plan #modal #modal-content {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+#plan #modal #modal-content .modal-header {
+  background-color: var(--dark-grey-blue);
+  padding: 25px 30px;
+  color: white;
+  font: 900 28px/32px var(--fraunces);
+}
+#plan #modal #modal-content .modal-body {
+  padding: 50px 25px 25px;
+}
+#plan #modal #modal-content .modal-body .order-description {
+  color: var(--grey);
+  font: 900 24px/40px var(--fraunces);
+}
+#plan #modal #modal-content .modal-body .order-description [data-bind] {
+  color: var(--dark-cyan);
+}
+#plan #modal #modal-content .modal-body p {
+  margin-top: 10px;
+  color: var(--dark-grey-blue);
+}
+#plan #modal #modal-content .modal-body button {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
 }

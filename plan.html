@@ -191,29 +191,32 @@
 
   <!-- Modal -->
   <div id="modal">
+    <div id="modal-blur"></div>
     <div id="modal-content">
-      <header>Order Summary</header>
-      <div class="order-description">
-        “I drink coffee
-        <span class="order-description-prefix"></span>
-        <span data-bind="method">_____</span>,
-        with a
-        <span data-bind="type">_____</span>
-        type of bean. 
-        <span data-bind="amount">_____</span>
-        <span class="grind-text">
-          ground ala 
-          <span data-bind="grind">_____</span>,
-        </span>
-        sent to me 
-        <span data-bind="frequency">_____</span>.
-      </div>
-      <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
-        is off. Subscription discount codes can also be redeemed at the checkout.</p>
-
-      <div id="price-and-submit">
-        <div id="order-price">$_____/month</div>
-        <div class="submit">Checkout</div>
+      <div class="modal-header">Order Summary</div>
+      <div class="modal-body">
+        <div class="order-description">
+          “I drink my coffee
+          <span class="order-description-prefix"></span>
+          <span data-bind="method">_____</span>,
+          with a
+          <span data-bind="type">_____</span>
+          type of bean. 
+          <span data-bind="amount">_____</span>
+          <span class="grind-text">
+            ground ala 
+            <span data-bind="grind">_____</span>,
+          </span>
+          sent to me 
+          <span data-bind="frequency">_____</span>.
+        </div>
+        <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
+          is off. Subscription discount codes can also be redeemed at the checkout.</p>
+  
+        <button id="price-and-submit">
+          Checkout -
+          <span id="order-price">$_____/month</span>
+        </button>
       </div>
     </div>
   </div>
@@ -375,6 +378,10 @@
               getCostString()
             );
         }
+      });
+
+      $('#submit-plan, #modal-blur').click(() => {
+        $('#modal').toggleClass('active');
       });
     })
   </script>
