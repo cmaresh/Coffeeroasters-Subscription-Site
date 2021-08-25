@@ -33,17 +33,20 @@
   <section id="steps">
     <ol>
       <li>
+        <div class="marker">01</div>
         <h4>Pick your coffee</h4>
         <p>Select from our evolving range of artisan coffees. Our beans are ethically
           sourced and we pay fair prices for them. There's new coffees in all profiles
           every month for you to try out.</p>
       </li>
       <li>
+        <div class="marker">02</div>
         <h4>Choose the frequency</h4>
         <p>Customize your order frequency, quantity, even your roast style and grind type.
           Pause, skip or cancel your subscription with no commitment through our online portal.</p>
       </li>
       <li>
+        <div class="marker">03</div>
         <h4>Receive and enjoy!</h4>
         <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
           world-class coffees curated to provide a distinct tasting experience.</p>
@@ -62,31 +65,31 @@
   </section>
 
   <section id="choices">
-    <div class="accordion-item">
-      <div class="accordion-button">
+    <div class="choice">
+      <div class="choice-button">
         How do you drink your coffee?
       </div>
-      <div class="accordion-content">
-        <div class="option">
+      <div class="choice-options" data-bind="method">
+        <div class="option" data-prefix="using" data-value="Capsules">
           <h4>Capsule</h4>
           Compatible with Nespresso systems and similar brewers
         </div>
-        <div class="option">
+        <div class="option" data-prefix="as">
           <h4>Filter</h4>
           For pour over or drip methods like Aeropress, Chemex, and V60
         </div>
-        <div class="option">
+        <div class="option" data-prefix="as">
           <h4>Espresso</h4>
           Dense and finely ground beans for an intense, flavorful experience
         </div>
       </div>
     </div>
     
-    <div class="accordion-item">
-      <div class="accordion-button">
+    <div class="choice">
+      <div class="choice-button">
         What type of coffee?
       </div>
-      <div class="accordion-content">
+      <div class="choice-options" data-bind="type">
         <div class="option">
           <h4>Single origin</h4>
           Distinct, high quality coffee from a specific family-owned farm
@@ -102,31 +105,31 @@
       </div>
     </div>
     
-    <div class="accordion-item">
-      <div class="accordion-button">
+    <div class="choice">
+      <div class="choice-button">
         How much would you like?
       </div>
-      <div class="accordion-content">
-        <div class="option">
+      <div class="choice-options" data-bind="amount">
+        <div class="option" costmod data-amount-index="0">
           <h4>250g</h4>
           Perfect for the solo drinker. Yields about 12 delicious cups.
         </div>
-        <div class="option">
+        <div class="option" costmod data-amount-index="1">
           <h4>500g</h4>
           Perfect option for a couple. Yields about 40 delectable cups.
         </div>
-        <div class="option">
+        <div class="option" costmod data-amount-index="2">
           <h4>1000g</h4>
           Perfect for offices and events. Yields about 90 delightful cups.
         </div>
       </div>
     </div>
     
-    <div class="accordion-item">
-      <div class="accordion-button">
+    <div class="choice">
+      <div class="choice-button" id="grind-choice-button">
         Want us to grind them?
       </div>
-      <div class="accordion-content">
+      <div class="choice-options" data-bind="grind">
         <div class="option">
           <h4>Wholebean</h4>
           Best choice if you cherish the full sensory experience
@@ -142,47 +145,49 @@
       </div>
     </div>
     
-    <div class="accordion-item">
-      <div class="accordion-button">
+    <div class="choice">
+      <div class="choice-button">
         How often should we deliver?
       </div>
-      <div class="accordion-content">
-        <div class="option">
+      <div class="choice-options" data-bind="frequency">
+        <div class="option" costmod data-freq-index="0">
           <h4>Every week</h4>
-          $14.00 per shipment. Includes free first-class shipping.
+          <span class="shipment-cost">_____</span> per shipment. Includes free first-class shipping.
         </div>
-        <div class="option">
+        <div class="option" costmod data-freq-index="1">
           <h4>Every 2 weeks</h4>
-          $17.25 per shipment. Includes free priority shipping.
+          <span class="shipment-cost">_____</span> per shipment. Includes free priority shipping.
         </div>
-        <div class="option">
+        <div class="option" costmod data-freq-index="2">
           <h4>Every month</h4>
-          $22.50 per shipment. Includes free priority shipping.
+          <span class="shipment-cost">_____</span> per shipment. Includes free priority shipping.
         </div>
       </div>
     </div>
   </section>
   
   <section id="summary">
-    <header>Order Summary</header>
+    <h5>Order Summary</h5>
     <div class="order-description">
-      “I drink coffee
-      <span></span>
-      <span>_____</span>,
+      “I drink my coffee
+      <span class="order-description-prefix"></span>
+      <span data-bind="method">_____</span>,
       with a
-      <span>_____</span>,
+      <span data-bind="type">_____</span>
       type of bean. 
-      <span>_____</span>,
-      ground ala 
-      <span>_____</span>,
+      <span data-bind="amount">_____</span>
+      <span class="grind-text">
+        ground ala 
+        <span data-bind="grind">_____</span>,
+      </span>
       sent to me 
-      <span>_____</span>.
+      <span data-bind="frequency">_____</span>.
     </div>
   </section>
   
-  <div id="submit-plan">
+  <button id="submit-plan">
     Create my plan!
-  </div>
+  </button>
 
   <!-- Modal -->
   <div id="modal">
@@ -190,22 +195,24 @@
       <header>Order Summary</header>
       <div class="order-description">
         “I drink coffee
-        <span></span>
-        <span>_____</span>,
+        <span class="order-description-prefix"></span>
+        <span data-bind="method">_____</span>,
         with a
-        <span>_____</span>,
+        <span data-bind="type">_____</span>
         type of bean. 
-        <span>_____</span>,
-        ground ala 
-        <span>_____</span>,
+        <span data-bind="amount">_____</span>
+        <span class="grind-text">
+          ground ala 
+          <span data-bind="grind">_____</span>,
+        </span>
         sent to me 
-        <span>_____</span>.
+        <span data-bind="frequency">_____</span>.
       </div>
       <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
         is off. Subscription discount codes can also be redeemed at the checkout.</p>
 
       <div id="price-and-submit">
-        <div class="price">$_____/month</div>
+        <div id="order-price">$_____/month</div>
         <div class="submit">Checkout</div>
       </div>
     </div>
@@ -225,6 +232,152 @@
       <img src="assets/shared/desktop/icon-instagram.svg">
     </div>
   </footer>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script>
+    let optionAnimating = false;
+    let costAmountIndex = -1;
+    let costFreqIndex = -1;
+
+    const COST_MATRIX = [
+      [ 7.20,  9.60,  12.00],
+      [13.00,  17.50, 22.00],
+      [22.00,  32.00, 42.00]
+    ];
+
+    const FREQ_COST_MULTIPLIERS = [4, 2, 1];
+
+    const getCostString = (val) => {
+      const base = COST_MATRIX[costAmountIndex][costFreqIndex];
+      const multiplier = FREQ_COST_MULTIPLIERS[costFreqIndex];
+
+      return '$' + (base * multiplier).toFixed(2).toString();
+    }
+
+    $(document).ready(() => {
+      $('.choice-button').click(function(e) {
+        if (optionAnimating) return;
+        const choiceOptions = $($(this).siblings('.choice-options')[0]);
+        const currChoice = $(this);
+        optionAnimating = true;
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active');
+          choiceOptions.slideUp('slow', 'swing', () => {
+            optionAnimating = false;
+          });
+          return;
+        }
+
+        $('.choice-button').each(function(e) {
+          $(this).removeClass('active');
+          $($(this).siblings('.choice-options')[0]).slideUp('slow', 'swing');
+        });
+
+        $(this).addClass('active');
+
+        choiceOptions.slideDown('slow', 'swing', () => {
+          optionAnimating = false;
+        });
+      });
+
+      const orderDescriptions = $('.order-description');
+      const freqOptions = $('.choice-options[data-bind=frequency]');
+
+      $('.option').click(function(e) {
+        const optionGroup = $(this).parent();
+
+        /** 
+         * PROCESS DESELECTING OPTION
+         **/
+        if ($(this).hasClass('selected')) {
+          $(this).removeClass('selected');
+          orderDescriptions
+            .find('[data-bind=' + optionGroup.attr('data-bind') + ']')
+            .text('_____');
+
+            const prefix = $(this).attr('data-prefix');
+            if (prefix) {
+              orderDescriptions
+                .find('.order-description-prefix')
+                .text('');
+            }
+
+            if ($(this).attr('data-amount-index')) {
+              costAmountIndex = -1;
+
+              freqOptions.find('.shipment-cost').text('_____');
+              $('#order-price').text('$_____/month');
+            }
+
+            if ($(this).attr('data-freq-index')) {
+              costFreqIndex = -1;
+              $('#order-price').text('$_____/month');
+            }
+
+            if ($(this).attr('data-value') == 'Capsules') {
+              $('#grind-choice-button').removeClass('disabled');
+              $('.grind-text').css('display', 'inline');
+            }
+
+            return;
+        } 
+
+        /** 
+         * PROCESS SELECTING OPTION
+         **/
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
+        
+        const value = $(this).attr('data-value') ? 
+          $(this).attr('data-value') : 
+          $(this).find('h4').text();
+
+        orderDescriptions
+          .find('[data-bind=' + optionGroup.attr('data-bind') + ']')
+          .text(value);
+          
+        const prefix = $(this).attr('data-prefix');
+        if (prefix) {
+          orderDescriptions
+            .find('.order-description-prefix')
+            .text(prefix);
+        }
+
+
+        if ($(this).attr('data-amount-index')) {
+          costAmountIndex = parseInt($(this).attr('data-amount-index'));
+
+          freqOptions.find('.shipment-cost').each(function(index) {
+            $(this).text(
+              '$' + COST_MATRIX[costAmountIndex][index].toFixed(2)
+              );
+          });
+        }
+
+        if ($(this).attr('data-freq-index')) {
+          costFreqIndex = parseInt($(this).attr('data-freq-index'));
+        }
+
+        if ($(this).parent().attr('data-bind') == 'method') {
+          if ($(this).attr('data-value') == 'Capsules') {
+            $('#grind-choice-button').addClass('disabled');
+            $('.grind-text').css('display', 'none');
+          } else {
+            $('#grind-choice-button').removeClass('disabled');
+            $('.grind-text').css('display', 'inline');
+          }
+        }
+
+        if (
+          costAmountIndex >= 0 &&
+          costFreqIndex >= 0
+          ) {
+            $('#order-price').text(
+              getCostString()
+            );
+        }
+      });
+    })
+  </script>
 </body>
 
 </html>

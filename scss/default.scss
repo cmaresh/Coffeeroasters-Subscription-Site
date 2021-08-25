@@ -1,4 +1,4 @@
-$tablet-width: 767px;
+$tablet-width: 1023px;
 $desktop-width: 991px;
 
 :root {
@@ -13,7 +13,11 @@ $desktop-width: 991px;
 }
 
 body {
-    font: 16px/26px var(--barlow);
+    font: 15px/25px var(--barlow);
+
+    @media(min-width: $tablet-width) {
+        font: 16px/26px var(--barlow);
+    }
 }
 
 .title-alternate-big {
@@ -100,33 +104,6 @@ button {
 
         h4 {
             color: white;
-        }
-    }
-}
-
-.accordion-item {
-    border: none;
-    .accordion-button {
-        font: 900 40px/48px var(--fraunces);
-        color: var(--grey);
-        background-color: white;
-        box-shadow: none;
-
-        &::after {
-            background-image: url('./assets/plan/desktop/icon-arrow.svg');
-        }
-
-        &:hover {
-            background-color: inherit;
-
-            &::after {
-                background-image: url('./assets/plan/desktop/icon-arrow-active.svg');
-            }
-        }
-
-        &.disabled {
-            opacity: 0.5;
-            pointer-events: none;
         }
     }
 }

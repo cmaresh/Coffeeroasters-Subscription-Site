@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const gulp_sass = require('gulp-sass');
+const gulp_sass = require('gulp-sass')(require('sass'));
 const browser_sync = require('browser-sync').create();
 
 function sass() {
