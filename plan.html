@@ -11,7 +11,7 @@
 
 <body id="plan" class="container">
   <header>
-    <img src="./assets/shared/desktop/logo.svg">
+    <img class="logo" src="./assets/shared/desktop/logo.svg">
     <nav>
       <a href="./index.html">Home</a>
       <a href="./about.html">About us</a>
@@ -51,119 +51,152 @@
         <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
           world-class coffees curated to provide a distinct tasting experience.</p>
       </li>
-    </ol>
-  </section>
-  
-  <section id="side-index">
-    <ol>
-      <li>Preferences</li>
-      <li>Bean type</li>
-      <li>Quantity</li>
-      <li>Grind option</li>
-      <li>Deliveries</li>
+      <div class="top-border"></div>
     </ol>
   </section>
 
   <section id="choices">
-    <div class="choice">
-      <div class="choice-button">
-        How do you drink your coffee?
-      </div>
-      <div class="choice-options" data-bind="method">
-        <div class="option" data-prefix="using" data-value="Capsules">
-          <h4>Capsule</h4>
-          Compatible with Nespresso systems and similar brewers
-        </div>
-        <div class="option" data-prefix="as">
-          <h4>Filter</h4>
-          For pour over or drip methods like Aeropress, Chemex, and V60
-        </div>
-        <div class="option" data-prefix="as">
-          <h4>Espresso</h4>
-          Dense and finely ground beans for an intense, flavorful experience
-        </div>
-      </div>
+    <div id="side-index">
+      <ol>
+        <li>
+          <div class="item-text">
+            <div class="marker">01</div> Preferences
+          </div>
+        </li>
+        <li>
+          <div class="item-text">
+            <div class="marker">02</div> Bean type
+          </div>
+        </li>
+        <li>
+          <div class="item-text">
+            <div class="marker">03</div> Quantity
+          </div>
+        </li>
+        <li>
+          <div class="item-text">
+            <div class="marker">04</div> Grind option
+          </div>
+        </li>
+        <li>
+          <div class="item-text">
+            <div class="marker">05</div> Deliveries
+          </div>  
+        </li>
+      </ol>
     </div>
-    
-    <div class="choice">
-      <div class="choice-button">
-        What type of coffee?
-      </div>
-      <div class="choice-options" data-bind="type">
-        <div class="option">
-          <h4>Single origin</h4>
-          Distinct, high quality coffee from a specific family-owned farm
+
+    <ul class="choices-list">
+      <li class="choice">
+        <div class="choice-button">
+          How do you drink your coffee?
         </div>
-        <div class="option">
-          <h4>Decaf</h4>
-          Just like regular coffee, except the caffeine has been removed
+        <div class="choice-options" data-bind="method">
+          <div class="choice-options-flex">
+            <div class="option" data-prefix="using" data-value="Capsules">
+              <h4>Capsule</h4>
+              Compatible with Nespresso systems and similar brewers
+            </div>
+            <div class="option" data-prefix="as">
+              <h4>Filter</h4>
+              For pour over or drip methods like Aeropress, Chemex, and V60
+            </div>
+            <div class="option" data-prefix="as">
+              <h4>Espresso</h4>
+              Dense and finely ground beans for an intense, flavorful experience
+            </div>
+          </div>
         </div>
-        <div class="option">
-          <h4>Blended</h4>
-          Combination of two or three dark roasted beans of organic coffees
+      </li>
+      
+      <li class="choice">
+        <div class="choice-button">
+          What type of coffee?
         </div>
-      </div>
-    </div>
-    
-    <div class="choice">
-      <div class="choice-button">
-        How much would you like?
-      </div>
-      <div class="choice-options" data-bind="amount">
-        <div class="option" costmod data-amount-index="0">
-          <h4>250g</h4>
-          Perfect for the solo drinker. Yields about 12 delicious cups.
+        <div class="choice-options" data-bind="type">
+          <div class="choice-options-flex">
+            <div class="option">
+              <h4>Single origin</h4>
+              Distinct, high quality coffee from a specific family-owned farm
+            </div>
+            <div class="option">
+              <h4>Decaf</h4>
+              Just like regular coffee, except the caffeine has been removed
+            </div>
+            <div class="option">
+              <h4>Blended</h4>
+              Combination of two or three dark roasted beans of organic coffees
+            </div>
+          </div>
         </div>
-        <div class="option" costmod data-amount-index="1">
-          <h4>500g</h4>
-          Perfect option for a couple. Yields about 40 delectable cups.
+      </li>
+      
+      <li class="choice">
+        <div class="choice-button">
+          How much would you like?
         </div>
-        <div class="option" costmod data-amount-index="2">
-          <h4>1000g</h4>
-          Perfect for offices and events. Yields about 90 delightful cups.
+        <div class="choice-options" data-bind="amount">
+          <div class="choice-options-flex">
+            <div class="option" costmod data-amount-index="0">
+              <h4>250g</h4>
+              Perfect for the solo drinker. Yields about 12 delicious cups.
+            </div>
+            <div class="option" costmod data-amount-index="1">
+              <h4>500g</h4>
+              Perfect option for a couple. Yields about 40 delectable cups.
+            </div>
+            <div class="option" costmod data-amount-index="2">
+              <h4>1000g</h4>
+              Perfect for offices and events. Yields about 90 delightful cups.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="choice">
-      <div class="choice-button" id="grind-choice-button">
-        Want us to grind them?
-      </div>
-      <div class="choice-options" data-bind="grind">
-        <div class="option">
-          <h4>Wholebean</h4>
-          Best choice if you cherish the full sensory experience
+      </li>
+      
+      <li class="choice">
+        <div class="choice-button" id="grind-choice-button">
+          Want us to grind them?
         </div>
-        <div class="option">
-          <h4>Filter</h4>
-          For drip or pour-over coffee methods such as V60 or Aeropress
+        <div class="choice-options" data-bind="grind">
+          <div class="choice-options-flex">
+            <div class="option">
+              <h4>Wholebean</h4>
+              Best choice if you cherish the full sensory experience
+            </div>
+            <div class="option">
+              <h4>Filter</h4>
+              For drip or pour-over coffee methods such as V60 or Aeropress
+            </div>
+            <div class="option">
+              <h4>Cafetiére</h4>
+              Course ground beans specially suited for french press coffee
+            </div>
+          </div>
         </div>
-        <div class="option">
-          <h4>Cafetiére</h4>
-          Course ground beans specially suited for french press coffee
+      </li>
+      
+      <li class="choice">
+        <div class="choice-button">
+          How often should we deliver?
         </div>
-      </div>
-    </div>
-    
-    <div class="choice">
-      <div class="choice-button">
-        How often should we deliver?
-      </div>
-      <div class="choice-options" data-bind="frequency">
-        <div class="option" costmod data-freq-index="0">
-          <h4>Every week</h4>
-          <span class="shipment-cost">_____</span> per shipment. Includes free first-class shipping.
+        <div class="choice-options" data-bind="frequency">
+          <div class="choice-options-flex">
+            <div class="option" costmod data-freq-index="0">
+              <h4>Every week</h4>
+              <span class="shipment-cost">_____</span> per shipment. Includes free first-class shipping.
+            </div>
+            <div class="option" costmod data-freq-index="1">
+              <h4>Every 2 weeks</h4>
+              <span class="shipment-cost">_____</span> per shipment. Includes free priority shipping.
+            </div>
+            <div class="option" costmod data-freq-index="2">
+              <h4>Every month</h4>
+              <span class="shipment-cost">_____</span> per shipment. Includes free priority shipping.
+            </div>
+          </div>
         </div>
-        <div class="option" costmod data-freq-index="1">
-          <h4>Every 2 weeks</h4>
-          <span class="shipment-cost">_____</span> per shipment. Includes free priority shipping.
-        </div>
-        <div class="option" costmod data-freq-index="2">
-          <h4>Every month</h4>
-          <span class="shipment-cost">_____</span> per shipment. Includes free priority shipping.
-        </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
   
   <section id="summary">
@@ -236,6 +269,7 @@
     </div>
   </footer>
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/default.js"></script>
   <script>
     let optionAnimating = false;
     let costAmountIndex = -1;
@@ -286,7 +320,7 @@
       const freqOptions = $('.choice-options[data-bind=frequency]');
 
       $('.option').click(function(e) {
-        const optionGroup = $(this).parent();
+        const optionGroup = $(this).closest('.choice-options');
 
         /** 
          * PROCESS DESELECTING OPTION
@@ -360,7 +394,7 @@
           costFreqIndex = parseInt($(this).attr('data-freq-index'));
         }
 
-        if ($(this).parent().attr('data-bind') == 'method') {
+        if ($(this).closest('.choice-options').attr('data-bind') == 'method') {
           if ($(this).attr('data-value') == 'Capsules') {
             $('#grind-choice-button').addClass('disabled');
             $('.grind-text').css('display', 'none');
