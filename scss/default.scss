@@ -115,13 +115,13 @@ header {
     left: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 25px;
+    padding: 25px 0;
     background-color: white;
     z-index: 100;
 
     @media(min-width: $tablet-width) {
         position: static;
-        padding: 45px 40px;
+        padding: 45px 0;
     }
 
     .logo {
@@ -282,8 +282,21 @@ footer {
 .container {
     max-width: none;
 }
+
+@media(min-width: $tablet-width) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
 @media(min-width: 1200px) {
     .container {
         max-width: 1280px
+    }
+}
+
+@media(min-width: 1320px) {
+    .container {
+        padding: 0;
     }
 }

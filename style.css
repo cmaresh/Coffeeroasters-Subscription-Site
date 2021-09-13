@@ -159,14 +159,14 @@ header {
   left: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 25px;
+  padding: 25px 0;
   background-color: white;
   z-index: 100;
 }
 @media (min-width: 768px) {
   header {
     position: static;
-    padding: 45px 40px;
+    padding: 45px 0;
   }
 }
 header .logo {
@@ -320,9 +320,19 @@ footer #footer__socials img:first-child {
   max-width: none;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
 @media (min-width: 1200px) {
   .container {
     max-width: 1280px;
+  }
+}
+@media (min-width: 1320px) {
+  .container {
+    padding: 0;
   }
 }
 #home #hero {
@@ -716,7 +726,7 @@ footer #footer__socials img:first-child {
     padding-top: 30px;
     border-top: 1px solid var(--pale-orange);
     width: 33%;
-    padding-right: 10px;
+    padding-right: 15px;
   }
   #home #how-it-works #how-it-works__list .how-it-works__item:last-child {
     border-top: none;
@@ -770,16 +780,6 @@ footer #footer__socials img:first-child {
   }
 }
 
-#about {
-  padding-right: 25px;
-  padding-left: 25px;
-}
-@media (min-width: 768px) {
-  #about {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
 #about #hero {
   position: relative;
   display: flex;
@@ -871,13 +871,14 @@ footer #footer__socials img:first-child {
 @media (min-width: 768px) {
   #about #our-commitment #our-commitment__image {
     padding-top: 167%;
-    margin-right: 60px;
+    margin-right: 30px;
     background-image: url("assets/about/tablet/image-commitment.jpg");
   }
 }
 @media (min-width: 991px) {
   #about #our-commitment #our-commitment__image {
     padding-top: 117%;
+    margin-right: 60px;
     background-image: url("assets/about/desktop/image-commitment.jpg");
   }
 }
@@ -1067,6 +1068,22 @@ footer #footer__socials img:first-child {
   display: flex;
   flex-direction: column;
 }
+#plan header {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media (min-width: 768px) {
+  #plan header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 991px) {
+  #plan header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 #plan.container {
   padding-left: 0;
   padding-right: 0;
@@ -1152,7 +1169,7 @@ footer #footer__socials img:first-child {
 }
 #plan #steps {
   padding: 75px 25px;
-  margin: 120px 0 100px;
+  margin: 120px 0 40px;
   background: no-repeat center/cover url("assets/plan/mobile/bg-steps.png");
   border-radius: 10px;
 }
@@ -1277,6 +1294,10 @@ footer #footer__socials img:first-child {
   margin: 0 25px;
   display: flex;
 }
+#plan #choices .right {
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 768px) {
   #plan #choices {
     margin: 0 40px;
@@ -1290,6 +1311,11 @@ footer #footer__socials img:first-child {
 #plan #choices #side-index {
   display: none;
   padding-right: 120px;
+  padding-top: 60px;
+}
+#plan #choices #side-index ol {
+  position: sticky;
+  top: 60px;
 }
 #plan #choices #side-index ol li {
   padding: 25px 0;
@@ -1307,6 +1333,9 @@ footer #footer__socials img:first-child {
   margin-right: 25px;
   color: var(--grey);
 }
+#plan #choices #side-index ol li .marker.has-value {
+  color: var(--dark-cyan);
+}
 #plan #choices #side-index ol li .item-text {
   opacity: 0.4;
   font: 900 24px/32px var(--fraunces);
@@ -1316,6 +1345,12 @@ footer #footer__socials img:first-child {
 }
 #plan #choices #side-index ol li.active .item-text {
   opacity: 1;
+}
+#plan #choices #side-index ol li.disabled {
+  pointer-events: none;
+}
+#plan #choices #side-index ol li.disabled .item-text {
+  opacity: 0.2;
 }
 @media (min-width: 991px) {
   #plan #choices #side-index {
@@ -1327,15 +1362,12 @@ footer #footer__socials img:first-child {
 }
 #plan #choices .choices-list .choice {
   border: none;
-  margin-top: 85px;
+  padding-top: 85px;
 }
 @media (min-width: 768px) {
   #plan #choices .choices-list .choice {
-    margin-top: 60px;
+    padding-top: 60px;
   }
-}
-#plan #choices .choices-list .choice:first-child {
-  margin-top: 0;
 }
 #plan #choices .choices-list .choice .choice-button {
   font: 900 24px/28px var(--fraunces);
@@ -1397,6 +1429,7 @@ footer #footer__socials img:first-child {
   border-radius: 8px;
   cursor: pointer;
   flex-basis: 33.33%;
+  transition: 0.1s background-color linear;
 }
 @media (min-width: 768px) {
   #plan #choices .choices-list .choice .choice-options .choice-options-flex .option {
@@ -1415,6 +1448,9 @@ footer #footer__socials img:first-child {
 #plan #choices .choices-list .choice .choice-options .choice-options-flex .option h4 {
   margin-bottom: 10px;
 }
+#plan #choices .choices-list .choice .choice-options .choice-options-flex .option:hover {
+  background-color: var(--pale-orange);
+}
 #plan #choices .choices-list .choice .choice-options .choice-options-flex .option.selected {
   background-color: var(--dark-cyan);
   color: white;
@@ -1424,13 +1460,13 @@ footer #footer__socials img:first-child {
 }
 #plan #summary {
   padding: 40px 25px;
-  margin: 120px 25px 55px;
+  margin: 120px 0 55px;
   background-color: var(--dark-grey-blue);
   border-radius: 8px;
 }
 @media (min-width: 768px) {
   #plan #summary {
-    margin: 120px 40px 55px;
+    margin: 120px 0 55px;
     padding: 25px 40px;
   }
 }

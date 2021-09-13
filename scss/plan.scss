@@ -2,6 +2,21 @@
     display: flex;
     flex-direction: column;
 
+    header {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        @media(min-width: $tablet-width) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @media(min-width: $desktop-width) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
     &.container {
         padding-left: 0;
         padding-right: 0;
@@ -85,7 +100,7 @@
 
     #steps {
         padding: 75px 25px;
-        margin: 120px 0 100px;
+        margin: 120px 0 40px;
         //background-color: var(--dark-grey-blue);
         background: no-repeat center/cover url("assets/plan/mobile/bg-steps.png");
         border-radius: 10px;
@@ -212,6 +227,10 @@
         margin: 0 25px;
         display: flex;
 
+        .right {
+            display: flex;
+            flex-direction: column;
+        }
         @media(min-width: $tablet-width) {
             margin: 0 40px;
         }
@@ -223,8 +242,11 @@
         #side-index {
             display: none;
             padding-right: 120px;
+            padding-top: 60px;
 
             ol {
+                position: sticky;
+                top: 60px;
                 li {
                     padding: 25px 0;
                     border-top: 1px solid rgba(131, 136, 143, 0.25);
@@ -241,6 +263,10 @@
                         display: inline-block;
                         margin-right: 25px;
                         color: var(--grey);
+
+                        &.has-value {
+                            color: var(--dark-cyan)
+                        }
                     }
 
                     .item-text {
@@ -259,6 +285,14 @@
                             opacity: 1;
                         }
                     }
+
+                    &.disabled {
+                        pointer-events: none;
+
+                        .item-text {
+                            opacity: 0.2;
+                        }
+                    }
                 }
             }
             @media(min-width: $desktop-width) {
@@ -271,14 +305,10 @@
 
             .choice {
                 border: none;
-                margin-top: 85px;
+                padding-top: 85px;
     
                 @media(min-width: $tablet-width) {
-                    margin-top: 60px;
-                }
-    
-                &:first-child {
-                    margin-top: 0;
+                    padding-top: 60px;
                 }
     
                 .choice-button {
@@ -343,6 +373,7 @@
                             border-radius: 8px;
                             cursor: pointer;
                             flex-basis: 33.33%;
+                            transition: 0.1s background-color linear;
         
                             @media(min-width: $tablet-width) {
                                 margin: 0 5px;
@@ -360,6 +391,10 @@
                                 margin-bottom: 10px;
                             }
         
+                            &:hover {
+                                background-color: var(--pale-orange);
+                            }
+
                             &.selected {
                                 background-color: var(--dark-cyan);
                                 color: white;
@@ -377,12 +412,12 @@
 
     #summary {
         padding: 40px 25px;
-        margin: 120px 25px 55px;
+        margin: 120px 0 55px;
         background-color: var(--dark-grey-blue);
         border-radius: 8px;
 
         @media(min-width: $tablet-width) {
-            margin: 120px 40px 55px;
+            margin: 120px 0 55px;
             padding: 25px 40px;
         }
         h5 {
