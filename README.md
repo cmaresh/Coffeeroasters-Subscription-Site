@@ -1,3 +1,5 @@
+This page is viewable on Github Pages at this link: https://cmaresh.github.io/Coffeeroasters-Subscription-Site/
+
 # Frontend Mentor - Coffeeroasters subscription site
 
 ![Design preview for the Coffeeroasters subscription site coding challenge](./preview.jpg)
